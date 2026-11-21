@@ -1,0 +1,2 @@
+*.gs linguist-language=JavaScript
+landing-pages/*.html linguist-generated=true
