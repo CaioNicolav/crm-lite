@@ -1,0 +1,41 @@
+<script>
+(function () {
+  var PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'];
+
+  function getParam(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  function setCookie(name, value, days) {
+    if (!value) return;
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/';
+  }
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : '';
+  }
+
+  PARAMS.forEach(function (p) {
+    var val = getParam(p);
+    if (val) setCookie(p, val, 90);
+  });
+
+  function preencherCamposOcultos() {
+    PARAMS.forEach(function (p) {
+      var field = document.querySelector('input[name="' + p + '"]');
+      if (field) field.value = getParam(p) || getCookie(p) || '';
+    });
+
+    var lpField = document.querySelector('input[name="lp_origem"]');
+    if (lpField && window.LP_ORIGEM) lpField.value = window.LP_ORIGEM;
+  }
+
+  preencherCamposOcultos();
+  setTimeout(preencherCamposOcultos, 500);
+  setTimeout(preencherCamposOcultos, 1500);
+  setTimeout(preencherCamposOcultos, 3000);
+})();
+</script>

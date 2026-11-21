@@ -1,0 +1,32 @@
+<script>
+(function() {
+  function setLpOrigem() {
+    var path = window.location.pathname;
+    var origem = null;
+
+    if (path.indexOf('distribuidor-menzoil-2') !== -1) {
+      origem = 'Distribuidor';
+    } else if (path.indexOf('revendedor-menzoil') !== -1) {
+      origem = 'Varejo';
+    }
+
+    if (origem) {
+      window.LP_ORIGEM = origem;
+
+      // Preenche o hidden field diretamente também, como reforço
+      var campo = document.querySelector('input[name="lp_origem"]');
+      if (campo) {
+        campo.value = origem;
+      }
+    }
+  }
+
+  // Executa imediatamente
+  setLpOrigem();
+
+  // Retentativas, no mesmo padrão da tag "UTM Capture - Global"
+  setTimeout(setLpOrigem, 500);
+  setTimeout(setLpOrigem, 1500);
+  setTimeout(setLpOrigem, 3000);
+})();
+</script>

@@ -1,0 +1,14 @@
+# Não versionar dados reais ou credenciais
+.env
+.env.*
+credentials.json
+secrets.json
+*.sqlite
+*.db
+leads-reais/
+bases-producao/
+*leads*real*.xlsx
+*clientes*real*.xlsx
+**/node_modules/
+**/__pycache__/
+**/.DS_Store

@@ -1,0 +1,274 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2026-11-21 16:37:55",
+    "containerVersion": {
+        "path": "accounts/6372055812/containers/261579975/versions/2",
+        "accountId": "6372055812",
+        "containerId": "261579975",
+        "containerVersionId": "2",
+        "name": "Conversões Lead Varejo e Distribuidor",
+        "description": "Tracking de Dados feito para conversões de lead - Varejo e Distribuidor / LP",
+        "container": {
+            "path": "accounts/6372055812/containers/261579975",
+            "accountId": "6372055812",
+            "containerId": "261579975",
+            "name": "Menzoil",
+            "publicId": "GTM-MBNGKQS2",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1787054115389",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6372055812/containers/261579975/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-MBNGKQS2"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "tagId": "3",
+                "name": "Lead Varejo",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "16819109168"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "SaxRCNSK-OwcELD6_NM-"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1788394362504",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "tagId": "4",
+                "name": "Lead Distribuidor",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "16819109168"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "AYpTCNeK-OwcELD6_NM-"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1788437588419",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "tagId": "6",
+                "name": "Conversion Linker - Global",
+                "type": "gclidw",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCrossDomain",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableUrlPassthrough",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCookieOverrides",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1788394432583",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "triggerId": "5",
+                "name": "Page View - Obrigado Varejo",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/obrigado-pelo-cadastro-varejo/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1788394261003"
+            },
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "triggerId": "7",
+                "name": "Page View - Obrigado Distribuidor",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/obrigado-pelo-cadastro-distribuidor/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1788437600637"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6372055812",
+                "containerId": "261579975",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1788445070227",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6372055812/containers/261579975/versions/2?apiLink=version"
+    }
+}
